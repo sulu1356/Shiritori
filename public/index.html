@@ -3,18 +3,37 @@
   <!-- headタグの中にはメタデータ等を記載する -->
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="styles.css" />
+    <title>第三次しりとり対戦</title>
+    <!-- reset.css destyle -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <link rel="stylesheet" href="index.css" />
   </head>
 
   <!-- bodyタグの中には実際に表示するものなどを書く -->
   <body>
-    <h1>しりとり</h1>
-    <!-- 現在の単語を表示する場所 -->
-    <p id="previousWord"></p>
-    <!-- 次の文字を入力するフォーム -->
-    <input id="nextWordInput" type="text" />
-    <button id="nextWordSendButton">送信</button>
-    <!-- JavaScriptを実行 -->
+    <header>
+      <div>第三次しりとり対戦</div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="title">ルール</div>
+        <ul>
+          <li>普通のしりとりだよ</li>
+          <li>対戦相手を敗北に追い詰めよう！！</li>
+        </ul>
+        <div class="title">このゲームの敗北条件</div>
+        <ul class="rule-boxs">
+          <li>回答時間の時間切れ(30秒)</li>
+          <li>末尾が「ん」で終わる単語が入力する</li>
+          <li>過去に使用した単語を入力する</li>
+        </ul>
+      </div>
+      <a href="/shiritori" class="start-btn">対戦部屋へ</a>
+    </main>
+    <footer></footer>
     <script>
       window.onload = async (event) => {
         // GET /shiritoriを実行
